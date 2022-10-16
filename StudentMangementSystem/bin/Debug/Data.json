@@ -1,0 +1,32 @@
+{
+  "studentList": [
+    {
+      "firstName": "Md.",
+      "middleName": "Aman",
+      "lastName": "Ullah",
+      "id": 1001,
+      "joiningBatch": "09",
+      "department": "CSE",
+      "degree": "BSC"
+    },
+    {
+      "firstName": "Biplab",
+      "middleName": "Kumar",
+      "lastName": "Sarkar",
+      "id": 1002,
+      "joiningBatch": "09",
+      "department": "CSE",
+      "degree": "BSC"
+    },
+    {
+      "firstName": "Abir",
+      "middleName": "Hasan",
+      "lastName": "Mubin",
+      "id": 1003,
+      "joiningBatch": "09",
+      "department": "EEE",
+      "degree": "BSC"
+    }
+  ],
+  "semeterList": []
+}

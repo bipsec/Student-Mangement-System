@@ -5,3 +5,13 @@ C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\
 C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\obj\Debug\StudentMangementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\obj\Debug\StudentMangementSystem.exe
 C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\obj\Debug\StudentMangementSystem.pdb
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\obj\Debug\StudentMangementSystem.csprojAssemblyReference.cache
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\obj\Debug\StudentMangementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\obj\Debug\StudentMangementSystem.exe
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\obj\Debug\StudentMangementSystem.pdb
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\bin\Debug\StudentMangementSystem.exe.config
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\bin\Debug\StudentMangementSystem.exe
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\bin\Debug\StudentMangementSystem.pdb
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Md Amanulla\source\Student-Mangement-System\StudentMangementSystem\obj\Debug\StudentMangementSystem.csproj.CopyComplete
