@@ -1,0 +1,7 @@
+C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\bin\Debug\StudentMangementSystem.exe.config
+C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\bin\Debug\StudentMangementSystem.exe
+C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\bin\Debug\StudentMangementSystem.pdb
+C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\obj\Debug\StudentMangementSystem.csprojAssemblyReference.cache
+C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\obj\Debug\StudentMangementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\obj\Debug\StudentMangementSystem.exe
+C:\Users\Md Amanulla\source\repos\StudentMangementSystem\StudentMangementSystem\obj\Debug\StudentMangementSystem.pdb
