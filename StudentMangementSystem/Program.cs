@@ -59,10 +59,22 @@ namespace StudentMangementSystem
             }
             else if (num == "3")
             {
-               //Delete Student
+                //Delete Student
+                string stdID;
                 Console.Write("Enter Student Id: ");
-                DataManager.DeleteStudent(Console.ReadLine());
-                Console.WriteLine("Student Deleted Successfully.");
+                stdID = Console.ReadLine();
+                Student student = DataManager.GetStudent(stdID);
+                
+                if (student!= null)
+                {
+                    DataManager.DeleteStudent(Console.ReadLine());
+                    Console.WriteLine("Student Deleted Successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Student not Found.");
+                }
+                
                
             }
 
