@@ -8,8 +8,8 @@ namespace StudentMangementSystem
 {
     class Semester
     {
-        public string semesterName, year;
+        public string stdId, semesterName, year;
 
     }
-    
+
 }

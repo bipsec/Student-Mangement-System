@@ -9,5 +9,7 @@ namespace StudentMangementSystem
     class Student
     {
         public string firstName, middleName, lastName, id, joiningBatch, department, degree;
+
+       
     }
 }

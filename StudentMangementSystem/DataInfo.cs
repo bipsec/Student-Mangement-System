@@ -9,7 +9,7 @@ namespace StudentMangementSystem
     class DataInfo
     {
         public List<Student> studentList = new List<Student>();
-        public List<Semester> semeterList = new List<Semester>();
+        public List<Semester> semesterList = new List<Semester>();
         public List<Course> courseList = new List<Course>();
 
     }

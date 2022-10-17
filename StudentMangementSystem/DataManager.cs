@@ -9,9 +9,6 @@ namespace StudentMangementSystem
 {
     class DataManager
     {
-        //Get
-        //Update Data
-        //Set Data
 
         readonly static string fileName = "Data.json";
         public static void SaveData(string json)
@@ -37,50 +34,90 @@ namespace StudentMangementSystem
         {
             DataInfo data = GetData();
             List<Student> studentList = data.studentList;
-            //for (int i = 0; i < studentList.Count; i++)
-            //{
-            //    if (studentList[i].id == id) return studentList[i];
-            //}
             return (from item in studentList where item.id == id select item).FirstOrDefault();
         }
-       // DataInfo sem;
-        public static Semester GetSemester()
+        // DataInfo sem;
+        public static List<Semester> GetSemester(string stdId)
         {
             DataInfo sem = GetData();
-            List<Semester> semesterList = sem.semeterList;
-
-            if (System.IO.File.Exists(fileName))
+            List<Semester> semesterList = sem.semesterList;
+            List<Semester> stdSemesterList = new List<Semester>();
+            for (int i = 0; i < semesterList.Count; i++)
             {
-                string oldData = System.IO.File.ReadAllText(fileName);
-                sem = JsonConvert.DeserializeObject<DataInfo>(oldData);
+                if (semesterList[i].stdId == stdId)
+                    stdSemesterList.Add(semesterList[i]);
             }
-            else
-            {
-                sem = new DataInfo();
-            }
-            return null;
-
+            return stdSemesterList;
 
         }
-        //DataInfo course;
+        
 
-        public static Course GetCourse()
+        public static List<Course> GetCourse(string stdId)
         {
             DataInfo course = GetData();
             List<Course> courseList = course.courseList;
-
-            if (System.IO.File.Exists(fileName))
+            List<Course> stdCourseList = new List<Course>();
+            
+            for (int i = 0; i < courseList.Count; i++)
             {
-                string oldData = System.IO.File.ReadAllText(fileName);
-                course = JsonConvert.DeserializeObject<DataInfo>(oldData);
+                if (courseList[i].stdId == stdId)
+                    stdCourseList.Add(courseList[i]);
+            }
+            return stdCourseList;
+        }
+
+        public static void DeleteStudent(string stdId)
+        {
+            DataInfo data = GetData();
+
+            for (int i = 0; i < data.studentList.Count; i++)
+            {
+                if (data.studentList[i].id == stdId) data.studentList.RemoveAt(i);
+            }
+            for (int i = 0; i < data.semesterList.Count; i++)
+            {
+                if (data.semesterList[i].stdId == stdId) data.semesterList.RemoveAt(i);
+            }
+            for (int i = 0; i < data.courseList.Count; i++)
+            {
+                if (data.courseList[i].stdId == stdId) data.courseList.RemoveAt(i);
+            }
+            SaveData(JsonConvert.SerializeObject(data, Formatting.Indented));
+        }
+
+        public static void ViewStudentDetails(string stdID)
+        {
+            Student presentStudent = GetStudent(stdID);
+
+            if (presentStudent != null)
+            {
+                Console.WriteLine("Student Name: " + presentStudent.firstName+ " " + presentStudent.middleName + " " + presentStudent.lastName);
+                Console.WriteLine("Student ID: " + presentStudent.id);
+                Console.WriteLine("Joining Batch: " + presentStudent.joiningBatch);
+                Console.WriteLine("Department: " + presentStudent.department);
+                Console.WriteLine("Degree: " + presentStudent.degree);
+
+                List<Semester> semesters = GetSemester(stdID);
+                for (int i = 0; i < semesters.Count; i++)
+                {
+                    Console.WriteLine("Semester Name: " + " " + semesters[i].semesterName + ", " +
+                                       "Year: " + " " + semesters[i].year);
+                }
+
+                List<Course> courses = GetCourse(stdID);
+                for (int i = 0; i < courses.Count; i++)
+                {
+                    Console.WriteLine("Course ID: "+" "+ courses[i].courseId + ", "+
+                                       "Course Name: "+ " "+ courses[i].courseName +", "+
+                                       "Instructor Name: "+ " "+ courses[i].instructorName+", "+
+                                       "Course Credit: "+ " "+ courses[i].courseCredit );
+                }
             }
             else
             {
-                course = new DataInfo();
+                Console.WriteLine("Sorry there is no student on this ID");
+
             }
-            return null;
-
-
         }
     }
 }
