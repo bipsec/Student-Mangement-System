@@ -128,7 +128,7 @@ namespace StudentMangementSystem
             newCourse.courseName = Console.ReadLine();
             while (!Validator.NameValidator(newCourse.courseName))
             {
-                Console.Write("Enter CourseID: ");
+                Console.Write("Enter Course Name: ");
                 newCourse.courseName = Console.ReadLine();
             }
 
@@ -136,7 +136,7 @@ namespace StudentMangementSystem
             newCourse.instructorName = Console.ReadLine();
             while (!Validator.NameValidator(newCourse.instructorName))
             {
-                Console.Write("Enter CourseID: ");
+                Console.Write("Enter Instructor name: ");
                 newCourse.instructorName = Console.ReadLine();
             }
 
