@@ -69,7 +69,7 @@ namespace StudentMangementSystem
         public static void DeleteStudent(string stdId)
         {
             DataInfo data = GetData();
-
+            //Console.Write(data.studentList.Count);
             for (int i = 0; i < data.studentList.Count; i++)
             {
                 if (data.studentList[i].id == stdId) data.studentList.RemoveAt(i);

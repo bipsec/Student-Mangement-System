@@ -67,7 +67,7 @@ namespace StudentMangementSystem
                 
                 if (student!= null)
                 {
-                    DataManager.DeleteStudent(Console.ReadLine());
+                    DataManager.DeleteStudent(stdID);
                     Console.WriteLine("Student Deleted Successfully.");
                 }
                 else
