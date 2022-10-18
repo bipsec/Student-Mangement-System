@@ -27,7 +27,13 @@ namespace StudentMangementSystem
 
         public static bool studentIDValidator(string studentID)
         {
-
+            //Student ID validation
+            Student student = DataManager.GetStudent(studentID);
+            if (student!= null)
+            {
+                Console.WriteLine("Stdent already exists.");
+                return false;
+            }
             var regex = @"^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{3})$";
             var match = Regex.Match(studentID, regex, RegexOptions.IgnoreCase);
 
@@ -70,9 +76,9 @@ namespace StudentMangementSystem
 
         {
             //FirstName, MiddleName, LastName, InstructorName,CourseName
-            if (datalength.Length < 5)
+            if (datalength.Length < 3)
             {
-                Console.WriteLine("Input should be atleast 5 characters long.");
+                Console.WriteLine("Input should be atleast 3 characters long.");
                 return false;
             }
             return true;
